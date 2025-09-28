@@ -15,10 +15,6 @@ cat <<EOF > $ENV_CONFIG_FILE
 (function (window) {
   window.__env = window.__env || {};
   window.__env.ENV = "${ENV}";
-  window.__env.AUTH_DOMAIN = "${AUTH_DOMAIN}";
-  window.__env.AUTH_CLIENT_ID = "${AUTH_CLIENT_ID}";
-  window.__env.AUTH_EPOCHLITHE_AUDIENCE = "${AUTH_EPOCHLITHE_AUDIENCE}";
-  window.__env.EPOCHLITHE_URL = "${EPOCHLITHE_URL}";
 })(this);
 EOF
 
