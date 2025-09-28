@@ -1,5 +1,8 @@
-<header>
-  <button (click)="onClick()">☰</button>
+<div style="position:fixed; width: 100%; background-color: blue">
+  <div style="display: flex; flex-direction: row; align-items: center; height: 48px">
+    <button (click)="onClick()">☰</button>
+    <span>PAQUIN Pierre - software developer tech lead / Coach Craft</span>
+  </div>
 
   @if (isActif) {
     <div>
@@ -7,8 +10,9 @@
         <li><a routerLink="/home">Home</a></li>
         <li><a routerLink="/cv">Mon CV</a></li>
         <li><a routerLink="/portfolio">Mon Portfolio</a></li>
+        <li><a href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
       </ul>
     </div>
   }
 
-</header>
+</div>
