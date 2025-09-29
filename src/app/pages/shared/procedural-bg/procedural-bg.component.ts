@@ -1,5 +1,14 @@
 import { Component, ElementRef, OnInit, ViewChild, HostListener, OnDestroy } from '@angular/core';
 
+interface Particle {
+  x: number;
+  y: number;
+  r: number;
+  dx: number;
+  dy: number;
+  color: string;
+}
+
 @Component({
   selector: 'app-procedural-bg',
   templateUrl: './procedural-bg.component.html',
@@ -11,14 +20,17 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
   private width = 0;
   private height = 0;
   private rafId = 0;
-  private t = 0;
+
+  private particles: Particle[] = [];
 
   ngOnInit(): void {
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
     if (!ctx) throw new Error('Canvas 2D non supporté');
     this.ctx = ctx;
+
     this.onResize();
+    this.initParticles(50); // nombre de particules
     this.loop();
   }
 
@@ -39,22 +51,42 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
     this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
 
+  private initParticles(count: number) {
+    this.particles = Array.from({ length: count }, () => ({
+      x: Math.random() * this.width,
+      y: Math.random() * this.height,
+      r: 30 + Math.random() * 50, // rayon
+      dx: (Math.random() - 0.5) * 0.5, // vitesse x
+      dy: (Math.random() - 0.5) * 0.5, // vitesse y
+      color: `hsla(${Math.random() * 360}, 80%, 60%, 0.4)`
+    }));
+  }
+
   private loop = () => {
-    this.t += 0.01;
     this.draw();
+    this.updateParticles();
     this.rafId = requestAnimationFrame(this.loop);
   };
 
+  private updateParticles() {
+    for (const p of this.particles) {
+      p.x += p.dx;
+      p.y += p.dy;
+      // rebond simple sur les bords
+      if (p.x < 0 || p.x > this.width) p.dx *= -1;
+      if (p.y < 0 || p.y > this.height) p.dy *= -1;
+    }
+  }
+
   private draw() {
     const ctx = this.ctx;
-    const w = this.width;
-    const h = this.height;
+    ctx.clearRect(0, 0, this.width, this.height);
 
-    // fond animé avec gradient simple (test)
-    const g = ctx.createLinearGradient(0, 0, w, h);
-    g.addColorStop(0, `hsl(${(this.t * 40) % 360}, 80%, 50%)`);
-    g.addColorStop(1, `hsl(${(this.t * 40 + 120) % 360}, 80%, 50%)`);
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, w, h);
+    for (const p of this.particles) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+    }
   }
 }
