@@ -2,17 +2,17 @@
   <div style="display: flex; flex-direction: row; align-items: center; height: 48px">
     <button style="margin-left: 8px" (click)="onClickMenuBurger()">☰</button>
     <div style="display: flex; justify-content: center; align-items: center; width: 100%">
-      <span style="color: white">PAQUIN Pierre - software developer / Coach Craft</span>
+      <span style="color: white">PAQUIN Pierre - <span style="color: purple;">software developer</span> / <span style="color: green">Coach Craft</span></span>
     </div>
   </div>
 
   @if (isActif) {
-    <div>
-      <ul style="list-style-type: none; color: white">
-        <li><a class="paq-link" (click)="onClickHome()">Home</a></li>
-        <li><a class="paq-link" (click)="onClickCv()">Mon CV</a></li>
-        <li><a class="paq-link" (click)="onClickPortfolio()">Mon Portfolio</a></li>
-        <li><a class="paq-link" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
+    <div style="display: flex; justify-content: center; width: 100%">
+      <ul style="list-style-type: none; color: white; display: flex; flex-direction: column; justify-content: center; width: 100%">
+        <li style="display: flex; justify-content: center;"><a class="paq-link" (click)="onClickHome()">Home</a></li>
+        <li style="display: flex; justify-content: center;"><a class="paq-link" (click)="onClickCv()">Mon CV</a></li>
+        <li style="display: flex; justify-content: center;"><a class="paq-link" (click)="onClickPortfolio()">Mon Portfolio</a></li>
+        <li style="display: flex; justify-content: center;"><a class="paq-link" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
       </ul>
     </div>
   }
