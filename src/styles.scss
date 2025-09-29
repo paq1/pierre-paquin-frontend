@@ -5,3 +5,16 @@ body {
   height: 100%;
   margin: 0;
 }
+
+.u-txt-white {
+  color: #fff;
+}
+
+a.paq-cursor-hover {
+  text-decoration: none;
+
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+}
