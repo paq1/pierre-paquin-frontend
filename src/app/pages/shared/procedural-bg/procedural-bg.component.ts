@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild, HostListener, OnDestroy } from '@angular/core';
+import {Component, ElementRef, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 
 interface Particle {
   x: number;
@@ -15,7 +15,7 @@ interface Particle {
   styleUrl: './procedural-bg.component.scss'
 })
 export class ProceduralBgComponent implements OnInit, OnDestroy {
-  @ViewChild('canvas', { static: true }) canvasRef!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('canvas', {static: true}) canvasRef!: ElementRef<HTMLCanvasElement>;
   private ctx!: CanvasRenderingContext2D;
   private width = 0;
   private height = 0;
@@ -40,6 +40,7 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
 
   @HostListener('window:resize')
   onResize() {
+    console.log('resize');
     const canvas = this.canvasRef.nativeElement;
     this.width = window.innerWidth;
     this.height = window.innerHeight;
@@ -52,14 +53,17 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
   }
 
   private initParticles(count: number) {
-    this.particles = Array.from({ length: count }, () => ({
-      x: Math.random() * this.width,
-      y: Math.random() * this.height,
-      r: 30 + Math.random() * 50, // rayon
-      dx: (Math.random() - 0.5) * 0.5, // vitesse x
-      dy: (Math.random() - 0.5) * 0.5, // vitesse y
-      color: `hsla(${Math.random() * 360}, 80%, 60%, 0.4)`
-    }));
+    this.particles = Array.from({length: count}, () => {
+      const hue = 100 + Math.random() * 40; // vert clair à vert foncé
+      return {
+        x: Math.random() * this.width,
+        y: Math.random() * this.height,
+        r: 30 + Math.random() * 50, // rayon
+        dx: (Math.random() - 0.5) * 0.5, // vitesse x
+        dy: (Math.random() - 0.5) * 0.5, // vitesse y
+        color: `hsla(${hue}, 70%, ${30 + Math.random() * 40}%, 0.4)`
+      }
+    });
   }
 
   private loop = () => {
