@@ -1,13 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@use "styles/utilities";
 
 html,
 body {
   height: 100%;
   margin: 0;
-}
-
-.u-txt-white {
-  color: #fff;
 }
 
 a.paq-cursor-hover {

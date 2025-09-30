@@ -1,0 +1,28 @@
+// size
+.u-max-width-300 {
+  max-width: 300px;
+}
+.u-max-height-300 {
+  max-height: 300px;
+}
+.u-full-size {
+  width: 100%;
+  height: 100%;
+}
+
+// flex
+.u-is-flex {
+  display: flex;
+}
+.u-flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+// text
+.u-txt-white {
+  color: #fff;
+}
+.u-is-txt-48 {
+  font-size: 48px;
+}
