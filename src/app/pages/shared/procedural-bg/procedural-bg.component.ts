@@ -86,6 +86,9 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
     const ctx = this.ctx;
     ctx.clearRect(0, 0, this.width, this.height);
 
+    ctx.fillStyle = "#7852A9";
+    ctx.fillRect(0, 0, this.width, this.height);
+
     for (const p of this.particles) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);

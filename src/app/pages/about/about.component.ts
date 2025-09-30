@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-cv',
+  selector: 'app-about',
   imports: [
     RouterLink
   ],
-  templateUrl: './cv.component.html',
-  styleUrl: './cv.component.scss'
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.scss'
 })
-export class CvComponent {
+export class AboutComponent {
 
 }

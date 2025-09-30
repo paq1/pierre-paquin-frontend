@@ -21,8 +21,8 @@ export class MenuComponent {
     this.moveToRoute('home');
   }
 
-  onClickCv(): void {
-    this.moveToRoute('cv');
+  onClickAbout(): void {
+    this.moveToRoute('about');
   }
 
   onClickPortfolio(): void {
