@@ -20,10 +20,15 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
   private width = 0;
   private height = 0;
   private rafId = 0;
+  private purple = '';
 
   private particles: Particle[] = [];
 
   ngOnInit(): void {
+
+    const rootStyles = getComputedStyle(document.documentElement);
+    this.purple = rootStyles.getPropertyValue('--color-purple').trim();
+
     const canvas = this.canvasRef.nativeElement;
     const ctx = canvas.getContext('2d');
     if (!ctx) throw new Error('Canvas 2D non supporté');
@@ -86,7 +91,7 @@ export class ProceduralBgComponent implements OnInit, OnDestroy {
     const ctx = this.ctx;
     ctx.clearRect(0, 0, this.width, this.height);
 
-    ctx.fillStyle = "#7852A9";
+    ctx.fillStyle = this.purple;
     ctx.fillRect(0, 0, this.width, this.height);
 
     for (const p of this.particles) {

@@ -1,9 +1,13 @@
-.paq-link {
+.paq-link-18 {
+  font-size: 18px;
   text-decoration: none;
   color: white;
+  transition-duration: 0.8s;
 
   &:hover {
     cursor: pointer;
     color: #AEEA00;
+    font-size: 25px;
+    transition-duration: 0.4s;
   }
 }
