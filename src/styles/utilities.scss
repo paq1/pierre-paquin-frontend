@@ -1,6 +1,8 @@
 :root {
   --color-white: #fff;
   --color-purple: #7852A9;
+  --color-dark: #121212;
+  --color-green-electric: #AEEA00;
 
   --color-emeraude: #007473;
   --color-emeraude-dark: #004B45;
@@ -36,6 +38,11 @@
   align-items: center;
   justify-content: center;
 }
+.u-flex-align-center-justify-space-between {
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 // text
 .u-txt-white {
@@ -54,4 +61,7 @@
 }
 .u-has-margin-bottom-16 {
   margin-bottom: 16px;
+}
+.u-has-margin-bottom-48 {
+  margin-bottom: 48px;
 }

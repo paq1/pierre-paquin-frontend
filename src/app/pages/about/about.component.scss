@@ -1,0 +1,36 @@
+.bubble-selected {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-green-electric);
+  color: var(--color-dark);
+  scale: 1.5;
+  //animation: scalePulse 2.5s ease-in-out infinite;
+}
+
+.bubble-unselected {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  color: var(--color-green-electric);
+
+  &:hover {
+    animation: none;
+    background-color: var(--color-green-electric);
+    color: var(--color-dark);
+    transition: 1s;
+    cursor: pointer;
+  }
+
+  &:not(hover) {
+    //background-color: var(--color-purple);
+    animation: scalePulse 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes scalePulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
