@@ -1,18 +1,23 @@
-<div style="position:fixed; width: 100%; background-color: #121212; z-index: 1000">
-  <div style="display: flex; flex-direction: row; align-items: center; height: 48px">
-    <button style="margin-left: 8px" (click)="onClickMenuBurger()">☰</button>
-    <div style="display: flex; justify-content: center; align-items: center; width: 100%">
-      <span style="color: white">PAQUIN Pierre - <span style="color: purple;">software developer</span> / <span style="color: green">Coach Craft</span></span>
+<div
+  class="u-is-fixed u-full-width u-bg-dark"
+  style="z-index: 1000">
+  <div class="u-is-flex u-flex-center u-has-padding-top-16 u-has-padding-bottom-16">
+    <button class="btn" (click)="onClickMenuBurger()">☰</button>
+    <div class="u-is-flex u-flex-center u-full-width">
+      <span
+        class="u-txt-white">PAQUIN Pierre - <span class="u-txt-purple">Software Developer</span> / <span class="u-txt-green">Coach Craft</span></span>
     </div>
   </div>
 
   @if (isActif) {
-    <div style="display: flex; justify-content: center; width: 100%">
-      <ul style="list-style-type: none; color: white; display: flex; flex-direction: column; justify-content: center; width: 100%">
-        <li style="display: flex; justify-content: center;"><a class="paq-link-18" (click)="onClickHome()">Home</a></li>
-        <li style="display: flex; justify-content: center;"><a class="paq-link-18" (click)="onClickAbout()">A propos</a></li>
-        <li style="display: flex; justify-content: center;"><a class="paq-link-18" (click)="onClickPortfolio()">Mon Portfolio</a></li>
-        <li style="display: flex; justify-content: center;"><a class="paq-link-18" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
+    <div
+      class="u-is-flex u-flex-center u-full-width">
+      <ul
+        class="u-is-flex u-flex-center u-flex-column u-txt-white u-full-width u-list-no-bullet">
+        <li><a class="paq-link-18" (click)="onClickHome()">Home</a></li>
+        <li><a class="paq-link-18" (click)="onClickAbout()">A propos</a></li>
+        <li><a class="paq-link-18" (click)="onClickPortfolio()">Mon Portfolio</a></li>
+        <li><a class="paq-link-18" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
       </ul>
     </div>
   }

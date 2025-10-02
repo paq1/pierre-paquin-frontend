@@ -1,3 +1,5 @@
+@use "list";
+
 :root {
   --color-white: #fff;
   --color-purple: #7852A9;
@@ -10,6 +12,11 @@
   --color-jaune: #E2B64C;
   --color-orange: #B87231;
   --color-rouge: #BE462D;
+}
+
+// bg
+.u-bg-dark {
+  background-color: var(--color-dark);
 }
 
 // size
@@ -25,6 +32,17 @@
 .u-full-size {
   width: 100%;
   height: 100%;
+}
+.u-full-width {
+  width: 100%;
+}
+.u-full-height {
+  height: 100%;
+}
+
+// position
+.u-is-fixed {
+  position: fixed;
 }
 
 // flex
@@ -48,6 +66,13 @@
 .u-txt-white {
   color: var(--color-white);
 }
+.u-txt-purple {
+  color: var(--color-purple);
+}
+.u-txt-green {
+  color: var(--color-green-electric);
+}
+
 .u-is-txt-48 {
   font-size: 48px;
 }
@@ -56,6 +81,38 @@
 }
 
 // padding / margin
+.u-has-padding-top-8 {
+  padding-top: 8px;
+}
+.u-has-padding-top-16 {
+  padding-top: 16px;
+}
+.u-has-padding-top-48 {
+  padding-top: 48px;
+}
+
+
+.u-has-padding-bottom-8 {
+  padding-bottom: 8px;
+}
+.u-has-padding-bottom-16 {
+  padding-bottom: 16px;
+}
+.u-has-padding-bottom-48 {
+  padding-bottom: 48px;
+}
+
+.u-has-margin-top-8 {
+  margin-top: 8px;
+}
+.u-has-margin-top-16 {
+  margin-top: 16px;
+}
+.u-has-margin-top-48 {
+  margin-top: 48px;
+}
+
+
 .u-has-margin-bottom-8 {
   margin-bottom: 8px;
 }

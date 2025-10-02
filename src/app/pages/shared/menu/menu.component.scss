@@ -11,3 +11,19 @@
     transition-duration: 0.4s;
   }
 }
+
+.btn {
+  margin-left: 8px;
+  background-color: #AEEA00;
+  border: none;
+  font-size: 25px;
+  border-radius: 2px;
+  transition-duration: 0.8s;
+
+  &:hover {
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+  }
+}
