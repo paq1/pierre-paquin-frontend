@@ -1,54 +1,39 @@
-
-
 <div
-  class="u-is-flex u-flex-center u-full-size">
+  class="u-is-flex u-flex-center u-has-padding-top-96">
 
-  <div>
-
+  <div class="u-is-flex u-flex-center u-flex-column">
     <div class="u-is-flex u-flex-align-center-justify-space-between u-full-size u-has-margin-bottom-48">
-
-      <div (click)="onSelectEtudes()" class="u-is-flex u-flex-center" [ngClass]="{'bubble-unselected': !this.isSelectedEtude, 'bubble-selected': this.isSelectedEtude}">
+      <div (click)="onSelectEtudes()" class="u-is-flex u-flex-center"
+           [ngClass]="{'bubble-unselected': !this.isSelectedEtude, 'bubble-selected': this.isSelectedEtude}">
         études
       </div>
-      <div (click)="onSelectDev()" class="bubble-selected u-is-flex u-flex-center" [ngClass]="{'bubble-unselected': !this.isSelectedDev, 'bubble-selected': this.isSelectedDev}">
+      <div (click)="onSelectDev()" class="bubble-selected u-is-flex u-flex-center"
+           [ngClass]="{'bubble-unselected': !this.isSelectedDev, 'bubble-selected': this.isSelectedDev}">
         Dev
       </div>
-
-      <div (click)="onSelectDoggoverse()" class="bubble-unselected u-is-flex u-flex-center" [ngClass]="{'bubble-unselected': !this.isSelectedDoggoverse, 'bubble-selected': this.isSelectedDoggoverse}">
+      <div (click)="onSelectDoggoverse()" class="bubble-unselected u-is-flex u-flex-center"
+           [ngClass]="{'bubble-unselected': !this.isSelectedDoggoverse, 'bubble-selected': this.isSelectedDoggoverse}">
         Doggoverse
       </div>
     </div>
 
 
-
     <div class="u-is-flex u-flex-center u-flex-column u-full-size u-max-width-400">
 
-
-<!-- TODO : mettre les bon texte pour chaque parties-->
       @if (isSelectedDev) {
-        <span>dev texte</span>
-        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">Je suis développeur full stack, diplômé d’un master en Interactions Homme-Machine, avec une forte appétence pour le back-end et l’architecture logicielle. Curieux et passionné, j’aime concevoir des solutions robustes et élégantes qui répondent réellement aux besoins des utilisateurs.</span>
 
-        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">En parallèle de mon parcours dans le développement, j’ai cofondé avec ma compagne un concept store canin, une aventure entrepreneuriale qui me permet de concilier mes compétences techniques avec une autre de mes grandes passions : les animaux.</span>
-
-        <span class="u-is-txt-20 u-txt-white">Aujourd’hui, je mets mon énergie et ma créativité au service de deux univers qui me tiennent à cœur : le code et les chiens.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">Je suis développeur au sein d’une ESN au Luxembourg et, depuis 4 ans, je suis en mission dans une entreprise d’assurance. Ce poste me permet de m’épanouir dans le développement backend et d’endosser également un rôle de coach craft, consistant à accompagner les développeurs en partageant de bonnes pratiques, en ravivant leur envie et leur passion pour la programmation, et en cultivant le goût du travail bien fait.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">En parallèle de mon travail, je développe également mes propres projets. J’ai créé plusieurs sites, dont celui de ma société, ainsi que mes propres API. Ces expériences personnelles m’ont permis d’approfondir ma maîtrise de nombreuses technologies, notamment Rust (avec Actix), Scala (Play Framework et Spark), PHP (WordPress), ainsi que des outils d’infrastructure comme k3s et Nginx.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">J’ai également acquis une solide expérience sur différentes bases de données et moteurs de recherche, tels que MongoDB, Redis, Elasticsearch et DB2, que j’utilise pour concevoir des solutions performantes et adaptées aux besoins.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">Au-delà de mes compétences techniques, j’occupe un rôle de Tech Lead et de coach craft. J’accompagne les développeurs dans leur progression, en transmettant de bonnes pratiques de programmation et en encourageant l’excellence technique. J’interviens également dans le recrutement, où j’évalue les candidats aussi bien sur leurs compétences que sur leur potentiel d’évolution, avec pour objectif de constituer des équipes motivées, passionnées et performantes.</span>
       } @else if (isSelectedEtude) {
-        <span>etude texte</span>
-        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">Je suis développeur full stack, diplômé d’un master en Interactions Homme-Machine, avec une forte appétence pour le back-end et l’architecture logicielle. Curieux et passionné, j’aime concevoir des solutions robustes et élégantes qui répondent réellement aux besoins des utilisateurs.</span>
-
-        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">En parallèle de mon parcours dans le développement, j’ai cofondé avec ma compagne un concept store canin, une aventure entrepreneuriale qui me permet de concilier mes compétences techniques avec une autre de mes grandes passions : les animaux.</span>
-
-        <span class="u-is-txt-20 u-txt-white">Aujourd’hui, je mets mon énergie et ma créativité au service de deux univers qui me tiennent à cœur : le code et les chiens.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">J’ai commencé mes études d’informatique à la faculté de Metz (UFR MIM), où j’ai obtenu ma licence en 2019, puis mon master en Interactions Homme-Machine (IHM) en 2021 avec la mention « très bien ».</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">J’ai choisi cette formation et cette spécialisation car la programmation est une passion qui m’anime depuis la fin du collège, où j’ai codé mes premiers sites web, puis au lycée, où j’ai développé mes premiers jeux vidéo.</span>
+        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">J’ai également suivi une formation en ligne dédiée au développement de jeux vidéo pendant un an. J’y ai appris à programmer des jeux entièrement en code (Lua, C, C++, C#) et participé à mes premières compétitions de création de jeux en ligne.</span>
       } @else if (isSelectedDoggoverse) {
-        <span>doggoverse texte</span>
-        <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">Je suis développeur full stack, diplômé d’un master en Interactions Homme-Machine, avec une forte appétence pour le back-end et l’architecture logicielle. Curieux et passionné, j’aime concevoir des solutions robustes et élégantes qui répondent réellement aux besoins des utilisateurs.</span>
-
         <span class="u-is-txt-20 u-txt-white u-has-margin-bottom-16">En parallèle de mon parcours dans le développement, j’ai cofondé avec ma compagne un concept store canin, une aventure entrepreneuriale qui me permet de concilier mes compétences techniques avec une autre de mes grandes passions : les animaux.</span>
-
         <span class="u-is-txt-20 u-txt-white">Aujourd’hui, je mets mon énergie et ma créativité au service de deux univers qui me tiennent à cœur : le code et les chiens.</span>
       }
-
-
 
     </div>
   </div>
