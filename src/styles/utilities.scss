@@ -135,3 +135,13 @@
 .u-has-margin-bottom-48 {
   margin-bottom: 48px;
 }
+
+.u-no-decorations {
+  text-decoration: none;
+}
+
+.u-decorations-hover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
