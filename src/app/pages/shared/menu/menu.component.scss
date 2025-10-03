@@ -5,27 +5,29 @@
   }
 }
 
+
+.LienMenu {
+  display: inline-block;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+    color: #AEEA00;
+    animation: shake 0.4s ease;
+  }
+}
+
+
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
   20%, 60% { transform: translateX(-10px); }
   40%, 80% { transform: translateX(10px); }
 }
 
-.paq-link-18 {
-  font-size: 18px;
-  text-decoration: none;
-  color: white;
-  transition-duration: 0.8s;
 
-  &:hover {
-    cursor: pointer;
-    color: #AEEA00;
-    font-size: 25px;
-    transition-duration: 0.4s;
-  }
-}
-
-.btn {
+.ButtonBurger {
   margin-left: 8px;
   background-color: #AEEA00;
   border: none;

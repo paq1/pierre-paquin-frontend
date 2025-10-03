@@ -2,7 +2,7 @@
   class="u-is-fixed u-has-full-width u-bg-dark"
   style="z-index: 1000">
   <div class="u-is-flex u-flex-center u-has-padding-top-16 u-has-padding-bottom-16">
-    <button class="btn" (click)="onClickMenuBurger()">☰</button>
+    <button class="ButtonBurger" (click)="onClickMenuBurger()">☰</button>
     <div class="u-has-full-width u-is-flex u-flex-column u-flex-center">
       <div (click)="onClickTitle()" class="TitleMenu u-is-flex u-flex-column u-flex-center">
         <span class="u-txt-white u-has-margin-bottom-8">PAQUIN Pierre</span>
@@ -20,10 +20,10 @@
       class="u-is-flex u-flex-center u-has-full-width">
       <ul
         class="u-is-flex u-flex-center u-flex-column u-txt-white u-has-full-width u-list-no-bullet">
-        <li><a class="paq-link-18" (click)="onClickHome()">Home</a></li>
-        <li><a class="paq-link-18" (click)="onClickAbout()">A propos</a></li>
-        <li><a class="paq-link-18" (click)="onClickPortfolio()">Mon Portfolio</a></li>
-        <li><a class="paq-link-18" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
+        <li><a class="LienMenu" (click)="onClickHome()">Home</a></li>
+        <li><a class="LienMenu" (click)="onClickAbout()">A propos</a></li>
+        <li><a class="LienMenu" (click)="onClickPortfolio()">Mon Portfolio</a></li>
+        <li><a class="LienMenu" href="https://www.doggoverse.fr">Mon entreprise (site Doggoverse)</a></li>
       </ul>
     </div>
   }
