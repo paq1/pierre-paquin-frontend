@@ -1,19 +1,25 @@
 <div
-  class="u-is-fixed u-full-width u-bg-dark"
+  class="u-is-fixed u-has-full-width u-bg-dark"
   style="z-index: 1000">
   <div class="u-is-flex u-flex-center u-has-padding-top-16 u-has-padding-bottom-16">
     <button class="btn" (click)="onClickMenuBurger()">☰</button>
-    <div class="u-is-flex u-flex-center u-full-width">
-      <span
-        class="u-txt-white">PAQUIN Pierre - <span class="u-txt-purple">Software Developer</span> / <span class="u-txt-green">Coach Craft</span></span>
+    <div class="u-has-full-width u-is-flex u-flex-column u-flex-center">
+      <div (click)="onClickTitle()" class="TitleMenu u-is-flex u-flex-column u-flex-center">
+        <span class="u-txt-white u-has-margin-bottom-8">PAQUIN Pierre</span>
+        <div>
+          <span class="u-txt-purple">Software Developer</span>
+          <span class="u-txt-white"> / </span>
+          <span class="u-txt-green">Coach Craft</span>
+        </div>
+      </div>
     </div>
   </div>
 
   @if (isActif) {
     <div
-      class="u-is-flex u-flex-center u-full-width">
+      class="u-is-flex u-flex-center u-has-full-width">
       <ul
-        class="u-is-flex u-flex-center u-flex-column u-txt-white u-full-width u-list-no-bullet">
+        class="u-is-flex u-flex-center u-flex-column u-txt-white u-has-full-width u-list-no-bullet">
         <li><a class="paq-link-18" (click)="onClickHome()">Home</a></li>
         <li><a class="paq-link-18" (click)="onClickAbout()">A propos</a></li>
         <li><a class="paq-link-18" (click)="onClickPortfolio()">Mon Portfolio</a></li>

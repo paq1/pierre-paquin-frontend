@@ -9,6 +9,4 @@ import {ProceduralBgComponent} from './pages/shared/procedural-bg/procedural-bg.
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'pierre-paquin-frontend';
-}
+export class AppComponent {}

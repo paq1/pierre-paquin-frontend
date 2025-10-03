@@ -15,23 +15,26 @@ export class MenuComponent {
   constructor(private readonly router: Router) {
   }
 
+  onClickTitle(): void {
+    this.moveToRoute('home').then(_ => {});
+  }
+
   onClickMenuBurger(): void { this.switchActif() }
 
   onClickHome(): void {
-    this.moveToRoute('home');
+    this.moveToRoute('home').then(() => this.switchActif());
   }
 
   onClickAbout(): void {
-    this.moveToRoute('about');
+    this.moveToRoute('about').then(() => this.switchActif());;
   }
 
   onClickPortfolio(): void {
-    this.moveToRoute('portfolio');
+    this.moveToRoute('portfolio').then(() => this.switchActif());
   }
 
-
-  private moveToRoute(path: string) {
-    this.router.navigate([path]).then(() => this.switchActif());
+  private moveToRoute(path: string): Promise<boolean> {
+    return this.router.navigate([path])
   }
 
   private switchActif(): void {
