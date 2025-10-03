@@ -1,7 +1,6 @@
 .TitleMenu {
   &:hover {
     cursor: pointer;
-    animation: shake 0.3s ease;
   }
 }
 
@@ -15,17 +14,8 @@
   &:hover {
     cursor: pointer;
     color: #AEEA00;
-    animation: shake 0.4s ease;
   }
 }
-
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  20%, 60% { transform: translateX(-10px); }
-  40%, 80% { transform: translateX(10px); }
-}
-
 
 .ButtonBurger {
   margin-left: 8px;
